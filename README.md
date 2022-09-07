@@ -1,6 +1,8 @@
-# state_comparison
+# State management comparison
 
-A state management solutions comparison
+## Getting started
+
+Implementation of all the state managements can be found in [lib/state_managements](https://github.com/Jan-Stepien/state_management_comparison/tree/main/lib/state_managements) directory.
 
 ## Purpose
 
