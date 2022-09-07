@@ -6,7 +6,7 @@ A state management solutions comparison
 
 This project is made to provide insight on different state management implementation approaches provided by Flutter in [official documentation](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options):
 
-[ ] [Provider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#provider)
+[X] [Provider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#provider)
 
 [ ] [Riverpod](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#riverpod)
 
