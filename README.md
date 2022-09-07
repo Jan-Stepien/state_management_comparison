@@ -14,7 +14,7 @@ This project is made to provide insight on different state management implementa
 
 - [X] [setState](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#setstate)
 
-- [ ] [InheritedWidget & InheritedModel](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#inheritedwidget--inheritedmodel)
+- [X] [InheritedWidget & InheritedModel](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#inheritedwidget--inheritedmodel)
 
 - [ ] [Redux](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#redux)
 

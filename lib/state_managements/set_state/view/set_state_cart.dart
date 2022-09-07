@@ -29,7 +29,7 @@ class _SetStateCartState extends State<SetStateCart> {
   @override
   Widget build(BuildContext context) {
     return SharedCartScaffold(
-      total: '${cart.totalPrice}',
+      total: 'Total: ${cart.totalPrice}',
       body: ListView.builder(
         itemCount: cart.items.length,
         itemBuilder: (context, index) => CartCard(

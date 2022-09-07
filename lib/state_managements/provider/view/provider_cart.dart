@@ -13,7 +13,7 @@ class ProviderCart extends StatelessWidget {
     final products = context.select<Cart, List<Product>>((cart) => cart.items);
 
     return SharedCartScaffold(
-      total: '$totalPrice',
+      total: 'Total: $totalPrice',
       body: ListView.builder(
         itemCount: products.length,
         itemBuilder: (context, index) => CartCard(

@@ -16,7 +16,7 @@ class RiverpodCart extends ConsumerWidget {
     );
 
     return SharedCartScaffold(
-      total: '$totalPrice',
+      total: 'Total: $totalPrice',
       body: ListView.builder(
         itemCount: products.length,
         itemBuilder: (context, index) => CartCard(
