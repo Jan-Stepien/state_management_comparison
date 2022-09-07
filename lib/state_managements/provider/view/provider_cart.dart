@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:products_repository/products_repository.dart';
 import 'package:provider/provider.dart';
+import 'package:state_comparison/common/common.dart';
 import 'package:state_comparison/state_managements/provider/provider.dart';
 
 class ProviderCart extends StatelessWidget {
@@ -7,16 +9,16 @@ class ProviderCart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<Cart>(
-      builder: (context, cart, _) => Scaffold(
-        appBar: AppBar(
-          title: Text('Total: ${cart.totalPrice}'),
-        ),
-        body: ListView.builder(
-          itemCount: cart.items.length,
-          itemBuilder: (context, index) => ListTile(
-            title: Text(cart.items[index].productName ?? ''),
-          ),
+    final totalPrice = context.select<Cart, double>((cart) => cart.totalPrice);
+    final products = context.select<Cart, List<Product>>((cart) => cart.items);
+
+    return SharedCartScaffold(
+      total: '$totalPrice',
+      body: ListView.builder(
+        itemCount: products.length,
+        itemBuilder: (context, index) => CartCard(
+          product: products[index],
+          removeFromCart: () => context.read<Cart>().remove(products[index]),
         ),
       ),
     );
