@@ -9,13 +9,18 @@ environment:
 dependencies:
   app_ui: 
     path: packages/app_ui
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   products_repository:
     path: packages/products_repository
   products_service:
     path: packages/products_service
+  # provider
   provider: ^6.0.3  
+  # riverpod
+  flutter_hooks: ^0.18.0
+  hooks_riverpod: ^2.0.0-dev.9
 
 dev_dependencies:
   flutter_test:
