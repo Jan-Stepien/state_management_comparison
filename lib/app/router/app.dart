@@ -2,6 +2,7 @@ import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:state_comparison/app/app.dart';
 import 'package:state_comparison/state_managements/riverpod/riverpod.dart';
+import 'package:state_comparison/state_managements/set_state/view/view.dart';
 import 'package:state_comparison/state_managements/state_managemenets.dart';
 
 class App extends StatelessWidget {
@@ -22,6 +23,11 @@ class App extends StatelessWidget {
             builder: (context) => const RiverpodPage(),
             settings: settings,
           );
+        } else if (settings.name == Pages.setState.name) {
+          return MaterialPageRoute(
+            builder: (context) => const SetStatePage(),
+            settings: settings,
+          );
         } else {
           return MaterialPageRoute(
             builder: (context) => const AppHome(),
@@ -36,13 +42,14 @@ class App extends StatelessWidget {
 enum Pages {
   home,
   provider,
+  riverpod,
+  setState,
   bloc,
   getx,
   mvvm,
   mvrx,
   mwwm,
   redux,
-  riverpod,
   stateNotifier,
   stateful,
   stateless,
@@ -60,5 +67,9 @@ final drawerItems = [
   DrawerItem(
     routeName: Pages.riverpod.name,
     displayName: 'Riverpod',
+  ),
+  DrawerItem(
+    routeName: Pages.setState.name,
+    displayName: 'SetState',
   ),
 ];
