@@ -20,11 +20,14 @@ dependencies:
   # provider
   provider: ^6.0.3  
   # riverpod
-  flutter_hooks: ^0.18.0
   hooks_riverpod: ^2.0.0-dev.9
   # redux
   redux: ^5.0.0
   flutter_redux: ^0.10.0
+  # get_it
+  get_it: ^7.2.0
+  get_it_mixin: ^3.1.4
+  
 
 dev_dependencies:
   flutter_test:

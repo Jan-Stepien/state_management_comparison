@@ -46,6 +46,11 @@ class App extends StatelessWidget {
             builder: (context) => const BlocPage(),
             settings: settings,
           );
+        } else if (settings.name == Pages.getIt.name) {
+          return MaterialPageRoute(
+            builder: (context) => const BlocPage(),
+            settings: settings,
+          );
         } else {
           return MaterialPageRoute(
             builder: (context) => const AppHome(),
@@ -65,6 +70,7 @@ enum Pages {
   inheritedWidget,
   redux,
   bloc,
+  getIt,
 }
 
 final drawerItems = [
@@ -95,5 +101,9 @@ final drawerItems = [
   DrawerItem(
     routeName: Pages.bloc.name,
     displayName: 'Bloc',
+  ),
+  DrawerItem(
+    routeName: Pages.getIt.name,
+    displayName: 'GetIt',
   ),
 ];

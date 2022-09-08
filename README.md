@@ -22,7 +22,7 @@ This project is made to provide insight on different state management implementa
 
 - [X] [BLoC / Rx](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#bloc--rx)
 
-- [ ] [GetIt](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#getit)
+- [X] [GetIt](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#getit)
 
 - [ ] [MobX](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#mobx)
 
