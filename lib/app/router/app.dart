@@ -1,10 +1,11 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:state_comparison/app/app.dart';
-import 'package:state_comparison/state_managements/inherited_widget/view/view.dart';
+import 'package:state_comparison/state_managements/inherited_widget/inherited_widget.dart';
+import 'package:state_comparison/state_managements/provider/provider.dart';
+import 'package:state_comparison/state_managements/redux/redux.dart';
 import 'package:state_comparison/state_managements/riverpod/riverpod.dart';
-import 'package:state_comparison/state_managements/set_state/view/view.dart';
-import 'package:state_comparison/state_managements/state_managemenets.dart';
+import 'package:state_comparison/state_managements/set_state/set_state.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -34,6 +35,11 @@ class App extends StatelessWidget {
             builder: (context) => const InheritedWidgetPage(),
             settings: settings,
           );
+        } else if (settings.name == Pages.redux.name) {
+          return MaterialPageRoute(
+            builder: (context) => const ReduxPage(),
+            settings: settings,
+          );
         } else {
           return MaterialPageRoute(
             builder: (context) => const AppHome(),
@@ -51,6 +57,7 @@ enum Pages {
   riverpod,
   setState,
   inheritedWidget,
+  redux,
 }
 
 final drawerItems = [
@@ -73,5 +80,9 @@ final drawerItems = [
   DrawerItem(
     routeName: Pages.inheritedWidget.name,
     displayName: 'Inherited Widget',
+  ),
+  DrawerItem(
+    routeName: Pages.redux.name,
+    displayName: 'Redux',
   ),
 ];
