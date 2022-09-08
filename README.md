@@ -16,11 +16,11 @@ This project is made to provide insight on different state management implementa
 
 - [X] [InheritedWidget & InheritedModel](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#inheritedwidget--inheritedmodel)
 
-- [ ] [Redux](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#redux)
+- [X] [Redux](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#redux)
 
-- [ ] [Fish-Redux](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#fish-redux)
+- [ ] [Fish-Redux](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#fish-redux) (Discontinued at Dart 2.2 - no sound null safety)
 
-- [ ] [BLoC / Rx](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#bloc--rx)
+- [X] [BLoC / Rx](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#bloc--rx)
 
 - [ ] [GetIt](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#getit)
 

@@ -1,6 +1,7 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:state_comparison/app/app.dart';
+import 'package:state_comparison/state_managements/bloc/bloc.dart';
 import 'package:state_comparison/state_managements/inherited_widget/inherited_widget.dart';
 import 'package:state_comparison/state_managements/provider/provider.dart';
 import 'package:state_comparison/state_managements/redux/redux.dart';
@@ -40,6 +41,11 @@ class App extends StatelessWidget {
             builder: (context) => const ReduxPage(),
             settings: settings,
           );
+        } else if (settings.name == Pages.bloc.name) {
+          return MaterialPageRoute(
+            builder: (context) => const BlocPage(),
+            settings: settings,
+          );
         } else {
           return MaterialPageRoute(
             builder: (context) => const AppHome(),
@@ -58,6 +64,7 @@ enum Pages {
   setState,
   inheritedWidget,
   redux,
+  bloc,
 }
 
 final drawerItems = [
@@ -84,5 +91,9 @@ final drawerItems = [
   DrawerItem(
     routeName: Pages.redux.name,
     displayName: 'Redux',
+  ),
+  DrawerItem(
+    routeName: Pages.bloc.name,
+    displayName: 'Bloc',
   ),
 ];
